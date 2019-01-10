@@ -12,4 +12,5 @@ USER node
 EXPOSE 1337
 EXPOSE 9229
 
-CMD [ "node", "--inspect-brk=0.0.0.0", "/opt/app/app.js" ]
+CMD [ "node", "--inspect=0.0.0.0", "/opt/app/app.js" ]
+#CMD [ "tail", "-f", "/dev/null" ]
