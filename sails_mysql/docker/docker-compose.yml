@@ -1,0 +1,15 @@
+version: '2'
+networks:
+  sails:
+    driver: bridge
+
+services:
+  node:
+    build: node
+    volumes:
+      - '${NODE_APP}:/opt/app:rw'
+    ports:
+      - '1337:1337'
+      - '9229:9229'
+    networks:
+      - sails
